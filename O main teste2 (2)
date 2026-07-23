@@ -1,0 +1,32 @@
+import Menu from "./scenes/Menu.js";
+import Partida from "./scenes/Partida.js";
+
+const config = {
+    type: Phaser.AUTO,
+
+    parent: "game",
+
+    width: 1280,
+    height: 720,
+
+    backgroundColor: "#101820",
+
+    scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH
+    },
+
+    physics: {
+        default: "arcade",
+        arcade: {
+            debug: false
+        }
+    },
+
+    scene: [
+        Menu,
+        Partida
+    ]
+};
+
+new Phaser.Game(config);

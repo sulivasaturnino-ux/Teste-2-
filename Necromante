@@ -1,0 +1,45 @@
+export default class Necromante {
+
+    constructor(scene, x, y) {
+
+        this.scene = scene;
+
+        this.sprite = scene.physics.add.sprite(x, y, "heroi");
+
+        this.sprite.setCollideWorldBounds(true);
+
+        this.vida = 1200;
+        this.mana = 800;
+
+        this.ataque = 75;
+        this.defesa = 30;
+        this.velocidade = 220;
+
+    }
+
+    mover(direcaoX, direcaoY) {
+
+        this.sprite.setVelocity(
+            direcaoX * this.velocidade,
+            direcaoY * this.velocidade
+        );
+
+    }
+
+    habilidade1() {
+        console.log("Esfera Sombria");
+    }
+
+    habilidade2() {
+        console.log("Invocar Esqueleto");
+    }
+
+    habilidade3() {
+        console.log("Explosão de Almas");
+    }
+
+    ultimate() {
+        console.log("Exército dos Mortos");
+    }
+
+}

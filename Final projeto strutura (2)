@@ -1,0 +1,52 @@
+RixaMobile/
+│
+├── index.html
+├── style.css
+├── main.js
+│
+├── assets/
+│   ├── mapas/
+│   ├── herois/
+│   ├── monstros/
+│   ├── torres/
+│   ├── minions/
+│   ├── habilidades/
+│   ├── interface/
+│   ├── itens/
+│   ├── efeitos/
+│   ├── musicas/
+│   └── sons/
+│
+├── scenes/
+│   ├── Splash.js
+│   ├── Menu.js
+│   ├── Login.js
+│   ├── Lobby.js
+│   ├── Loja.js
+│   ├── Perfil.js
+│   ├── Partida.js
+│   ├── Resultado.js
+│   └── Configuracoes.js
+│
+├── personagens/
+│   ├── Necromante.js
+│   ├── Atirador.js
+│   ├── Guerreiro.js
+│   ├── Tanque.js
+│   └── Mago.js
+│
+├── sistema/
+│   ├── Movimento.js
+│   ├── Combate.js
+│   ├── Economia.js
+│   ├── IA.js
+│   ├── Multiplayer.js
+│   ├── LojaSistema.js
+│   ├── Inventario.js
+│   └── Eventos.js
+│
+└── ui/
+    ├── Joystick.js
+    ├── HUD.js
+    ├── MiniMapa.js
+    └── Botoes.js

@@ -1,0 +1,71 @@
+export default class Partida extends Phaser.Scene {
+
+    constructor() {
+        super("Partida");
+    }
+
+    preload() {
+
+        // Sprite temporário do herói
+        this.load.image(
+            "heroi",
+            "assets/herois/heroi.png"
+        );
+
+    }
+
+    create() {
+
+        // Fundo temporário
+        this.cameras.main.setBackgroundColor("#2E8B57");
+
+        // Área do mapa
+        this.add.rectangle(1000, 1000, 2000, 2000, 0x3c8d2f);
+
+        // Jogador
+        this.player = this.physics.add.sprite(
+            1000,
+            1000,
+            "heroi"
+        );
+
+        this.player.setCollideWorldBounds(true);
+
+        // Mundo
+        this.physics.world.setBounds(0, 0, 2000, 2000);
+
+        // Câmera
+        this.cameras.main.startFollow(this.player);
+        this.cameras.main.setZoom(1.2);
+        this.cameras.main.setBounds(0, 0, 2000, 2000);
+
+        // Controles
+        this.cursors = this.input.keyboard.createCursorKeys();
+
+    }
+
+    update() {
+
+        const velocidade = 250;
+
+        this.player.setVelocity(0);
+
+        if (this.cursors.left.isDown) {
+            this.player.setVelocityX(-velocidade);
+        }
+
+        if (this.cursors.right.isDown) {
+            this.player.setVelocityX(velocidade);
+        }
+
+        if (this.cursors.up.isDown) {
+            this.player.setVelocityY(-velocidade);
+        }
+
+        if (this.cursors.down.isDown) {
+            this.player.setVelocityY(velocidade);
+        }
+
+    }
+
+}

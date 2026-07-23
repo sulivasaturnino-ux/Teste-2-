@@ -1,0 +1,70 @@
+export default class Menu extends Phaser.Scene {
+
+    constructor() {
+        super("Menu");
+    }
+
+    preload() {
+
+    }
+
+    create() {
+
+        // Fundo
+        this.cameras.main.setBackgroundColor("#14213d");
+
+        // Título
+        this.add.text(640, 80, "RIXA MOBILE", {
+            fontSize: "52px",
+            color: "#FFD700",
+            fontStyle: "bold"
+        }).setOrigin(0.5);
+
+        // Botão Jogar
+        const jogar = this.add.text(640, 220, "JOGAR", {
+            fontSize: "36px",
+            backgroundColor: "#006400",
+            color: "#ffffff",
+            padding: {
+                left: 30,
+                right: 30,
+                top: 15,
+                bottom: 15
+            }
+        }).setOrigin(0.5).setInteractive();
+
+        jogar.on("pointerdown", () => {
+            this.scene.start("Partida");
+        });
+
+        // Botão Loja
+        this.criarBotao(640, 320, "LOJA");
+
+        // Botão Perfil
+        this.criarBotao(640, 400, "PERFIL");
+
+        // Botão Diamantes
+        this.criarBotao(640, 480, "DIAMANTES");
+
+        // Botão Eventos
+        this.criarBotao(640, 560, "EVENTOS");
+
+    }
+
+    criarBotao(x, y, texto){
+
+        this.add.text(x, y, texto, {
+            fontSize:"30px",
+            backgroundColor:"#444",
+            color:"#FFF",
+            padding:{
+                left:25,
+                right:25,
+                top:12,
+                bottom:12
+            }
+        }).setOrigin(0.5);
+
+    }
+
+}

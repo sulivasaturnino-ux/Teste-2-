@@ -1,0 +1,12 @@
+✅ index.html
+style.css
+main.js
+Menu.js
+Partida.js
+Necromante.js
+Atirador.js
+Movimento.js
+Combate.js
+IA.js
+Economia.js
+Multiplayer.js

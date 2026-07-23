@@ -1,0 +1,31 @@
+RixaMobile
+│
+├── index.html
+├── style.css
+├── main.js
+│
+├── assets
+│   ├── mapas
+│   ├── herois
+│   ├── monstros
+│   ├── habilidades
+│   ├── interface
+│   ├── sons
+│   └── efeitos
+│
+├── personagens
+│   ├── Necromante.js
+│   └── Atirador.js
+│
+├── scenes
+│   ├── Menu.js
+│   ├── Partida.js
+│   ├── Loja.js
+│   └── Perfil.js
+│
+└── sistema
+    ├── Movimento.js
+    ├── Combate.js
+    ├── Economia.js
+    ├── IA.js
+    └── Multiplayer.js
